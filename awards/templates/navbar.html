@@ -19,12 +19,17 @@
     <nav class="navbar navbar-inverse">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a class="navbar-brand" href="{% url 'index' %}" style="font-size:50px;font-family: 'Bungee Shade', cursive;">ACCOLADE</a>
+                <a class="navbar-brand" href="{% url 'index' %}" style="font-size:50px;font-family: 'Bungee Shade', cursive; color: salmon;">ACCOLADE</a>
             </div>
             <!--Adding a search form-->
-            <div class="col-sm-4 col-md-4 navbar-right">
-                <form>
-
+            <div class="col-sm-4 col-md-4">
+                <form class="navbar-form" role="search" action="{% url 'search' %}" style="margin-left: 300px;">
+                    <div class="input-group">
+                        <input type="text" name='project' class="form-control" placeholder="Search" style="width:200px;">
+                        <div class="input-group-btn">
+                            <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                        </div>
+                    </div>
                 </form>
             </div>
             <!--Search form end-->
