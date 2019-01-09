@@ -11,6 +11,10 @@ def index(request):
 def search(request):
     return render(request, 'search.html')
 
+@login_required(login_url='/accounts/login')
+def profile(request):
+    return render(request, 'profile.html')
+
 
 
     
